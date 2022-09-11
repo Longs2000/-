@@ -39,19 +39,19 @@
         <van-row>
           <van-grid class="grid" :border="false">
             <van-grid-item text="头条">
-              <template #icon>{{userInfo.art_count}}</template>
+              <template #icon>{{ userInfo.art_count }}</template>
             </van-grid-item>
 
             <van-grid-item text="粉丝">
-              <template #icon>{{userInfo.fans_count}}</template>
+              <template #icon>{{ userInfo.fans_count }}</template>
             </van-grid-item>
 
             <van-grid-item text="关注">
-              <template #icon>{{userInfo.follow_count}}</template>
+              <template #icon>{{ userInfo.follow_count }}</template>
             </van-grid-item>
 
             <van-grid-item text="获赞">
-              <template #icon>{{userInfo.like_count}}</template>
+              <template #icon>{{ userInfo.like_count }}</template>
             </van-grid-item>
           </van-grid>
         </van-row>
@@ -126,7 +126,7 @@ export default {
         // 用户登陆了继续
         if (!this.isLogin) return
 
-        const { data } = await this.getUserInfoAPI()
+        const { data } = await getUserInfoAPI()
 
         this.userInfo = data.data
       } catch (error) {
