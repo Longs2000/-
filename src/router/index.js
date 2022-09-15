@@ -32,6 +32,10 @@ const routes = [
     // 设置路由懒加载
     //   - 使用到了路由页面，再去请求他
     component: () => import('@/views/Login')
+  },
+  {
+    path: '/search',
+    component: () => import(/* webpackChunkName:'Search' */ '@/views/Search')
   }
 ]
 
